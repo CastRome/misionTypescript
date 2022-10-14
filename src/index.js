@@ -1,5 +1,5 @@
 var accounts = [];
-function open(number, balance) {
+function openAcc(number, balance) {
     accounts.push({ number: number, balance: balance });
 }
 function getBalance(number) {
@@ -22,7 +22,7 @@ function withdraw(number, amount) {
         throw new Error("Fondos insuficientes");
     account.balance -= amount;
 }
-open("111", 0);
+openAcc("111", 0);
 deposit("111", 1000);
 console.log(getBalance("111"));
 withdraw("111", 500);
